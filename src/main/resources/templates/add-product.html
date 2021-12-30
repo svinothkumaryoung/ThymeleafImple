@@ -6,68 +6,80 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <style>
-    .container-fluid
-    {
-    color:#fff;
-    }
-</style>
+    <link th:href="@{~/design.css}" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+
 </head>
 <body>
-<h1>Welcome to Spring Boot App with Thymeleaf</h1>
-<div class="container">
-        <a href="">Add Product</a>
-        <div class="col-sm-8">
-           <form action="#" th:action="@{/product/addInfo}" th:object="${product}" method="post">
-               <div class="row">
-                   <div class="form-group-col-md-10">
-                       <label for="productName" class="col-form-label">
-                           Product Name
-                       </label>
-                       <input type="text"
-                              class="form-control"
-                              id="productName"
-                              th:field="*{productName}"
-                              placeholder="Product Name">
-                   </div>
 
-                   <div class="form-group-col-md-10">
-                       <label for="productDescription" class="col-form-label">
-                           Product Name
-                       </label>
-                       <input type="text"
-                              class="form-control"
-                              id="productDescription"
-                              th:field="*{productDescription}"
-                              placeholder="Product Description">
-                   </div>
-                   <div class="form-group-col-md-10">
-                       <label for="productQty" class="col-form-label">
-                           Product Quantity
-                       </label>
-                       <input type="text"
-                              class="form-control"
-                              id="productQty"
-                              th:field="*{productQty}"
-                              placeholder="Product Quantity">
-                   </div>
-                   <div class="form-group-col-md-10">
-                       <label for="productPrice" class="col-form-label">
-                           Product Price
-                       </label>
-                       <input type="text"
-                              class="form-control"
-                              id="productPrice"
-                              th:field="*{productPrice}"
-                              placeholder="Product Quantity">
-                   </div>
-                   <div>
-                       <input type="submit" class="btn btn-primary" value="Add Product">
-                   </div>
+<div class="container">
+       <div class="d-flex justify-content-center h-100">
+           <div class="card">
+               <div class="card-header">
+                   <h4>Add Product</h4>
                </div>
-           </form>
-        </div>
-    </div>
+               <div class="card-body">
+                   <form action="#" th:action="@{/product/addInfo}" th:object="${product}" method="post">
+
+                           <div class="input-group form-group ">
+                               <div class="input-group-prepend">
+                                   <i class="fab fa-adn"></i>
+                               </div>
+                               <input type="text"
+                                      class="form-control"
+                                      id="productName"
+                                      th:field="*{productName}"
+                                      placeholder="Product Name" required>
+                           </div>
+                       <div class="input-group form-group ">
+                           <div class="input-group-prepend">
+                               <i class="fab fa-adn"></i>
+                           </div>
+                           <textarea
+                                  class="form-control"
+                                  id="productDescription"
+                                  th:field="*{productDescription}"
+                                  placeholder="Product Description" required>
+                           </textarea>
+                       </div>
+
+                       <div class="input-group form-group ">
+                           <div class="input-group-prepend">
+                               <i class="fab fa-adn"></i>
+                           </div>
+                           <input type="text"
+                                  class="form-control"
+                                  id="productQty"
+                                  th:field="*{productQty}"
+                                  placeholder="Product Quantity" required>
+                       </div>
+
+                       <div class="input-group form-group ">
+                           <div class="input-group-prepend">
+                               <i class="fab fa-adn"></i>
+                           </div>
+                           <input type="text"
+                                  class="form-control"
+                                  id="productPrice"
+                                  th:field="*{productPrice}"
+                                  placeholder="Product Price" required>
+                       </div>
+
+                       <div class="form-group">
+                           <input type="submit" class="btn btn-primary" value="Add Product">
+                       </div>
+                       <div class="card-footer">
+                           <div class="d-flex justify-content-center links">
+                               <a href="/product/view">View Records</a>
+                           </div>
+                       </div>
+
+                   </form>
+               </div>
+           </div>
+       </div>
 
 </div>
 

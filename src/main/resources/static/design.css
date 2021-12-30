@@ -1,6 +1,84 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+
 body
 {
-background-color: #123;
-color: #fff;
+font-family: 'Great Vibes', cursive;
+font-family: 'Playfair Display', serif;
+font-family: 'Tinos', serif;
+font-family: 'Vujahday Script', cursive;
+background-image: url('https://in.musafir.com/uploads/Kashmir_a_Land_of_Unimaginable_Beauty_4_7b792359bb.png');
+background-size: cover;
+background-repeat: no-repeat;
+height:100vh;
+}
+.container
+{
+height:100vh;
+align-content: center;
+border-radius: 15px;
 
 }
+.card
+{
+position:fixed;
+height: 400px;
+margin-top: 20%;
+margin-left:25%;
+width: 400px;
+border-radius:15px;
+background-image: linear-gradient(to right,rgba(214,21,109,1),rgba(118,51,188,0));
+}
+.card-header h4
+{
+color:#123;
+text-align: center;
+}
+.form-control,a
+{
+margin-top: 10px;
+width: 16vw;
+margin-left: 10%;
+padding: 2px;
+padding-bottom:26px;
+}
+.form-control:hover
+{
+box-shadow: 5px 5px 10px 1px #123;
+}
+a{
+maring-top:10px;
+color:#fff;
+}
+
+.form-group input[type="submit"]
+{
+border-radius:2px;
+box-sizing:inherit;
+color:white;
+cursor: pointer;
+display: inline-block;
+height: 26px;
+width:16vw;
+padding:10px;
+letter-spacing: 0.5px;
+line-height: 42px;
+margin-left:10%;
+pointer-event: all;
+position: relative;
+text-decoration-line: none;
+vertical-align: middle;
+font-size: 1.6em;
+padding:0.2em;
+transition: 800ms ease all;
+padding-bottom:26px;
+color:#ffffff;
+}
+.btn-primary
+{
+background-color:#0D3276;
+}
+
+
+
